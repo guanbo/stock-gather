@@ -55,7 +55,7 @@ class Gather(object):
   def format_value(self, value):
     unit = value[-1:]
     if unit == '%':
-      res = float(value[:-1])/100
+      res = float(value[:-1].replace(",",""))/100
     else:
       res = value
     return res
