@@ -17,7 +17,7 @@ from . import Gather
 def main():
   _gather = Gather()
   _code = "60{code:04d}.SS"
-  for c in range(20):
+  for c in [0, 1, 13]:
     _gather.pasre(_code.format(code=c))
   pass
 
