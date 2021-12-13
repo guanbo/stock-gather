@@ -12,12 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sys
 from . import Gather
+
+MARKET='SS'
 
 def main():
   _gather = Gather()
   _code = "60{code:04d}.SS"
-  for c in [0, 1, 13]:
+  for c in range(0, 2000):
     _gather.pasre(_code.format(code=c))
   pass
 
