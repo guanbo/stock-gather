@@ -19,14 +19,15 @@ MARKET='SS'
 
 def main():
   _gather = Gather()
-  _code = [
+  _codes = [
     "600{code:03d}.SS",
     "601{code:03d}.SS",
     "000{code:03d}.SZ",
     "002{code:03d}.SZ"
   ]
-  for c in range(0, 1000):
-    _gather.pasre(_code.format(code=c))
+  for _code in _codes:
+    for c in range(0, 1000):
+      _gather.pasre(_code.format(code=c))
   pass
 
 if __name__ == "__main__":
